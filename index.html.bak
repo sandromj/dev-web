@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edege">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Responsivo Navegador</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<header>
+  <div class="navbar">
+     <div class="logo"><a href="#">Web Dev Creative</a></div>
+	    <ul class="links">
+		   <li><a href="home.html">Home</a></li>
+		   <li><a href="about">About</a></li>
+		   <li><a href="servicos">Serviços</a></li>
+		   <li><a href="conatos">Contato</a></li>
+	    </ul>
+	    <a href="#" class="action_btn">Get Started</a>
+
+	<div class="toggle_btn">
+	    <i class="fa-solid fa-bars"></i>
+
+   </div>
+
+<!-- === DROPDOWN DO MENU ===-->
+   <div class="dropdown_menu open">
+   	   <li><a href="home">Home</a></li>
+	   <li><a href="about">About</a></li>
+	   <li><a href="servicos">Serviços</a></li>
+	   <li><a href="conatos">Contato</a></li>
+	   <li><a href="#" class="action_btn">Get Started</a></li>
+   </div>
+</header>
+
+<main>
+	<section id="hero">
+		<h1>Welcome</h1>
+		  <p>
+		  	Lorem ipsum sit amet consectetur adipisicing elit. Aliquam, atque.
+		  </p>
+	</section>
+</main>
+
+
+
+
+
+<!-- +++++++ SCRIPT ++++++ -->
+<script>
+   const toggleBtn = document.querySelector('.toggle_btn')
+   const toggleBtnIcon = document.querySelector('.toggle_btn i')
+   const dropDownMenu = document.querySelector('.dropdown_menu')
+
+   toggleBtn.onclick = function(){
+   	 dropDownMenu.classList.toggle('open')
+   	 const isOpen = dropDownMenu.classList.contains('open')
+
+   	 toggleBtnIcon.classList = isOpen
+   	   ? 'fa-solid fa-xmark'
+   	   : 'fa-solid fa-bars'
+   }  	
+</script>
+
+</body>
+</html>
